@@ -18,6 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/komik">komik</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mahasiswa">mahasiswa</a>
+                </li>
             </ul>
         </div>
     </div>

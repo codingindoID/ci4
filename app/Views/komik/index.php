@@ -13,14 +13,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td><img src="\img\naruto.jpg" alt="" class="sampul"></td>
-                <td>naruto</td>
-                <td>
-                    <a href="#" class="btn btn-success">detail</a>
-                </td>
-            </tr>
+            <?php foreach ($komik as $komik) : ?>
+                <tr>
+                    <th scope="row"><?= $komik['id'] ?></th>
+                    <td><img src="\img\<?= $komik['sampul'] ?>" alt="" class="sampul"></td>
+                    <td><?= $komik['judul'] ?></td>
+                    <td>
+                        <a href="/komik/<?= $komik['slug']; ?>" class="btn btn-success">detail</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </div>
