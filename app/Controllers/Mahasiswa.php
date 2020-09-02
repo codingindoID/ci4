@@ -41,8 +41,12 @@ class Mahasiswa extends BaseController
 
     function insert()
     {
-        $data['title']  = 'Tambah Mahasiswa';
-        $data['prodi']  = $this->master->getProdi();
+        $data = [
+            'title'         => 'Tambah Mahasiswa',
+            'prodi'         => $this->master->getProdi(),
+            'validation'    => \Config\Services::validation()
+        ];
+
         return view('mahasiswa/tambah', $data);
     }
 
@@ -61,7 +65,7 @@ class Mahasiswa extends BaseController
                 'alamat' => 'required'
             ]
         )) {
-            dd($validation);
+            return redirect()->to('/insert_mhs')->withInput()->with('validation', $validation);
         }
 
         $this->mhs->save($data);

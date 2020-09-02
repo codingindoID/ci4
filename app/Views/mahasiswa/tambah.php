@@ -1,17 +1,20 @@
 <?php $this->extend('layout/index'); ?>
 <?php $this->section('content'); ?>
 <div class="container mt-4">
+
     <form action="/save_mhs" method="post">
         <div class="form-group row">
             <label for="inputNama3" class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputNama3" name="nama">
+                <input type="text" class="form-control <?= ($validation->hasError('nama')) ? 'is-invalid' : '' ?>" id="inputNama3" name="nama" value="<?= old('nama') ?>">
+                <div class="invalid-feedback"><?= $validation->getError('nama') ?></div>
             </div>
         </div>
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="alamat" name="alamat">
+                <input type="text" class="form-control <?= ($validation->hasError('alamat')) ? 'is-invalid' : '' ?>" id="alamat" name="alamat" value="<?= old('alamat') ?>">
+                <div class="invalid-feedback"><?= $validation->getError('alamat') ?></div>
             </div>
         </div>
         <div class="form-group row">
