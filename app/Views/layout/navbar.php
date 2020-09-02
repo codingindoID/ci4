@@ -15,11 +15,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="/komik">komik</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="/mahasiswa">mahasiswa</a>
+                    <a class="nav-link" href="/viewM">mahasiswa</a>
                 </li>
             </ul>
         </div>

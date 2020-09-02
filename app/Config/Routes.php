@@ -35,9 +35,17 @@ $routes->get('/', 'Pages::index');
 $routes->get('/about', 'Pages::about');
 $routes->get('/contact', 'Pages::contact');
 $routes->get('/komik', 'Komik::index');
-$routes->get('/mahasiswa', 'Mahasiswa::index');
-
 $routes->get('/komik/(:segment)', 'Komik::detail/$1');
+
+//mahasiswa
+$routes->get('/viewM', 'Mahasiswa::index');
+$routes->get('/mhs/(:segment)', 'Mahasiswa::detail/$1');
+$routes->get('/move/(:segment)', 'Mahasiswa::rem/$1');
+$routes->get('/insert_mhs', 'Mahasiswa::insert');
+$routes->post('/update', 'Mahasiswa::update');
+
+$routes->post('/save_mhs', 'Mahasiswa::save');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing

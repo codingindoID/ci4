@@ -1,8 +1,8 @@
 <?php $this->extend('layout/index') ?>
 
 <?php $this->section('content') ?>
-
 <div class="container">
+    <a href="/insert_mhs" class="btn btn-success my-2">tambah data</a>
     <table class="table">
         <thead>
             <tr>
@@ -21,7 +21,8 @@
                     <td><?= $mhs['alamat'] ?></td>
                     <td><?= $mhs['prodi'] ?></td>
                     <td>
-                        <a href="#" class="btn btn-success">detail</a>
+                        <a href="/mhs/<?= $mhs['nim']; ?>" class="btn btn-success">detail</a>
+                        <a href="/move/<?= $mhs['nim']; ?>" onclick="return confirm('Hapus <?= $mhs['nama']; ?> ?')" class="btn btn-danger">hapus</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
